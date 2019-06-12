@@ -9,11 +9,11 @@
   <description>微信开发Java SDK</description>
   <url>https://github.com/readyou/WxJava</url>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+  <!--<parent>-->
+    <!--<groupId>org.sonatype.oss</groupId>-->
+    <!--<artifactId>oss-parent</artifactId>-->
+    <!--<version>7</version>-->
+  <!--</parent>-->
 
   <licenses>
     <license>
