@@ -272,12 +272,12 @@ public abstract class BaseWxCpServiceImpl<H, P> implements WxCpService, RequestH
       }
 
       if (error.getErrorCode() != 0) {
-        this.log.error("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：{}", uriWithAccessToken, dataForLog, error);
+        this.log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：{}", uriWithAccessToken, dataForLog, error);
         throw new WxErrorException(error, e);
       }
       return null;
     } catch (IOException e) {
-      this.log.error("\n【请求地址】: {}\n【请求参数】：{}\n【异常信息】：{}", uriWithAccessToken, dataForLog, e.getMessage());
+      this.log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【异常信息】：{}", uriWithAccessToken, dataForLog, e.getMessage());
       throw new RuntimeException(e);
     }
   }
