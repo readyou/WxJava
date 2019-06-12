@@ -66,7 +66,7 @@
 
 ```xml
 <dependency>
-  <groupId>com.github.binarywang</groupId>
+  <groupId>com.github.readyou</groupId>
   <artifactId>（不同模块参考下文）</artifactId>
   <version>3.4.0</version>
 </dependency>

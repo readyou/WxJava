@@ -3,7 +3,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>com.github.binarywang</groupId>
+    <groupId>com.github.readyou</groupId>
     <artifactId>wx-java</artifactId>
     <version>3.4.0</version>
   </parent>
@@ -15,7 +15,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.github.binarywang</groupId>
+      <groupId>com.github.readyou</groupId>
       <artifactId>weixin-java-common</artifactId>
       <version>${project.version}</version>
     </dependency>

@@ -3,7 +3,7 @@
 1. 引入依赖
     ```xml
     <dependency>
-        <groupId>com.github.binarywang</groupId>
+        <groupId>com.github.readyou</groupId>
         <artifactId>wx-java-mp-starter</artifactId>
         <version>${version}</version>
     </dependency>

@@ -2,7 +2,7 @@
 1. 在自己的Spring Boot项目里，引入maven依赖
 ```xml
     <dependency>
-        <groupId>com.github.binarywang</groupId>
+        <groupId>com.github.readyou</groupId>
         <artifactId>wx-java-pay-starter</artifactId>
         <version>${version}</version>
     </dependency>
