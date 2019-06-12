@@ -58,7 +58,7 @@ public class WxPayServiceApacheHttpImpl extends BaseWxPayServiceImpl {
         httpPost.releaseConnection();
       }
     } catch (Exception e) {
-      this.log.error("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
+      this.log.warn("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
       wxApiData.set(new WxPayApiData(url, requestStr, null, e.getMessage()));
       throw new WxPayException(e.getMessage(), e);
     }
@@ -82,7 +82,7 @@ public class WxPayServiceApacheHttpImpl extends BaseWxPayServiceImpl {
         httpPost.releaseConnection();
       }
     } catch (Exception e) {
-      this.log.error("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
+      this.log.warn("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
       if (this.getConfig().isIfSaveApiData()) {
         wxApiData.set(new WxPayApiData(url, requestStr, null, e.getMessage()));
       }
@@ -95,7 +95,7 @@ public class WxPayServiceApacheHttpImpl extends BaseWxPayServiceImpl {
       return new StringEntity(new String(requestStr.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
     } catch (UnsupportedEncodingException e) {
       //cannot happen
-      this.log.error(e.getMessage(), e);
+      this.log.warn(e.getMessage(), e);
       return null;
     }
   }

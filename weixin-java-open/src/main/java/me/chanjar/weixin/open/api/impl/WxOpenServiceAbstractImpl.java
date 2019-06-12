@@ -50,12 +50,12 @@ public abstract class WxOpenServiceAbstractImpl<H, P> implements WxOpenService, 
     } catch (WxErrorException e) {
       WxError error = e.getError();
       if (error.getErrorCode() != 0) {
-        this.log.error("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：{}", uri, data, error);
+        this.log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【错误信息】：{}", uri, data, error);
         throw new WxErrorException(error, e);
       }
       return null;
     } catch (IOException e) {
-      this.log.error("\n【请求地址】: {}\n【请求参数】：{}\n【异常信息】：{}", uri, data, e.getMessage());
+      this.log.warn("\n【请求地址】: {}\n【请求参数】：{}\n【异常信息】：{}", uri, data, e.getMessage());
       throw new RuntimeException(e);
     }
   }

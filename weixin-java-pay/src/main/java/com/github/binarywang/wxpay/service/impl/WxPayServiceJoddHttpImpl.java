@@ -43,7 +43,7 @@ public class WxPayServiceJoddHttpImpl extends BaseWxPayServiceImpl {
       }
       return responseBytes;
     } catch (Exception e) {
-      this.log.error("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
+      this.log.warn("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
       wxApiData.set(new WxPayApiData(url, requestStr, null, e.getMessage()));
       throw new WxPayException(e.getMessage(), e);
     }
@@ -61,7 +61,7 @@ public class WxPayServiceJoddHttpImpl extends BaseWxPayServiceImpl {
       }
       return responseString;
     } catch (Exception e) {
-      this.log.error("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
+      this.log.warn("\n【请求地址】：{}\n【请求数据】：{}\n【异常信息】：{}", url, requestStr, e.getMessage());
       wxApiData.set(new WxPayApiData(url, requestStr, null, e.getMessage()));
       throw new WxPayException(e.getMessage(), e);
     }
