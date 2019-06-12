@@ -3,7 +3,7 @@
   <parent>
     <artifactId>wx-java</artifactId>
     <groupId>com.github.readyou</groupId>
-    <version>3.4.0</version>
+    <version>3.4.1-SNAPSHOT</version>
     <relativePath>../../</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
