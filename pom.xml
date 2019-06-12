@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-<project
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.readyou</groupId>
   <artifactId>wx-java</artifactId>
-  <version>3.4.0-SNAPSHOT</version>
+  <version>3.4.0</version>
   <packaging>pom</packaging>
   <name>WxJava - Weixin/Wechat Java SDK</name>
   <description>微信开发Java SDK</description>
@@ -37,6 +35,7 @@
     <connection>scm:git:https://github.com/readyou/WxJava.git</connection>
     <developerConnection>scm:git:git@github.com:readyou/WxJava.git</developerConnection>
     <url>https://github.com/readyou/WxJava</url>
+    <tag>wx-java-3.4.0</tag>
   </scm>
 
   <modules>
@@ -58,6 +57,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <httpclient.version>4.5</httpclient.version>
     <jetty.version>9.4.17.v20190418</jetty.version>
+
+    <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
 
   <dependencyManagement>
@@ -232,24 +233,24 @@
               </execution>
             </executions>
           </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.9.1</version>
-            <executions>
-              <execution>
-                <id>attach-javadocs</id>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <additionalparam>${javadoc.opts}</additionalparam>
-              <charset>UTF-8</charset>
-              <locale>zh_CN</locale>
-            </configuration>
-          </plugin>
+          <!--<plugin>-->
+          <!--<groupId>org.apache.maven.plugins</groupId>-->
+          <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+          <!--<version>2.9.1</version>-->
+          <!--<executions>-->
+          <!--<execution>-->
+          <!--<id>attach-javadocs</id>-->
+          <!--<goals>-->
+          <!--<goal>jar</goal>-->
+          <!--</goals>-->
+          <!--</execution>-->
+          <!--</executions>-->
+          <!--<configuration>-->
+          <!--<additionalparam>${javadoc.opts}</additionalparam>-->
+          <!--<charset>UTF-8</charset>-->
+          <!--<locale>zh_CN</locale>-->
+          <!--</configuration>-->
+          <!--</plugin>-->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
